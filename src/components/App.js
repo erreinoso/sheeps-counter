@@ -8,7 +8,6 @@ class App extends React.Component {
     console.log('render de app');
     return (
       <div>
-        Hola mundo
         <SheepAnimation />
         <SheepCounter />
       </div>

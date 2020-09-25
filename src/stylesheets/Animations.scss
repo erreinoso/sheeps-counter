@@ -1,0 +1,101 @@
+/* sheep animations */
+@keyframes walk-leg-back-cycle {
+  0% {
+    @include rotate(-10deg);
+  }
+  100% {
+    @include rotate-and-move-x(10deg, -20px);
+  }
+}
+@keyframes walk-leg-front-cycle {
+  0% {
+    @include rotate(10deg);
+  }
+  100% {
+    @include rotate-and-move-x(-10deg, 20px);
+  }
+}
+
+@keyframes head-cycle {
+  40% {
+    @include rotate(10deg);
+  }
+  100% {
+    @include rotate(-5deg);
+  }
+}
+@keyframes ear-1-cycle {
+  0%,
+  10%,
+  20%,
+  40%,
+  50%,
+  100% {
+    @include rotate(65deg);
+  }
+  5%,
+  45% {
+    @include rotate(85deg);
+  }
+  15% {
+    @include rotate(80deg);
+  }
+}
+
+@keyframes ear-2-cycle {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  70%,
+  80%,
+  100% {
+    @include rotate(5deg);
+  }
+  15%,
+  75% {
+    @include rotate(-5deg);
+  }
+  45% {
+    @include rotate(0deg);
+  }
+}
+
+@keyframes sheep-walking-cycle {
+  0% {
+    transform: translateX(-200px);
+    @include tablet {
+      transform: translateX(10px);
+    }
+  }
+  100% {
+    transform: translateX(110vw);
+  }
+}
+
+@keyframes eye-blink-cycle {
+  100% {
+    height: 1.5px;
+    border-radius: 0;
+    margin-top: 5px;
+  }
+}
+@keyframes eye-blink-glow-cycle {
+  100% {
+    height: 0;
+    border-radius: 0;
+  }
+}
+
+/* base page layout */
+body {
+  background: $color-background;
+}
+
+/* Utility & Helpers */
+
+.transform-origin-top-left-corner {
+  transform-origin: top left;
+}

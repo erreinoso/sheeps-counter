@@ -12,8 +12,6 @@ class SheepCounter extends React.Component {
   // Función que suma unidades al contador
   handleSheep(ev) {
     // actualizar contador (necesitamos función callback porque nos basamos en el estado anterior)
-    console.log('está funcionando handlebox');
-
     this.setState((prevState) => {
       let newCounter = prevState.counter++;
       console.log(prevState.text);
@@ -30,10 +28,11 @@ class SheepCounter extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sectionCounter">
         <p className="bigNumber">{this.state.counter}</p>
-
-        <button onClick={this.handleSheep}> {this.state.text}</button>
+        <button className="button" onClick={this.handleSheep}>
+          {this.state.text}
+        </button>
       </div>
     );
   }
