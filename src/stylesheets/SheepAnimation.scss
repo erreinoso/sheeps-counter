@@ -1,24 +1,16 @@
-.blue {
-  background-color: aquamarine;
-  height: 40px;
-  width: 40px;
-  border: 1px, solid, grey;
-}
-
-.red {
-  background-color: red;
-  height: 40px;
-  width: 40px;
-  border: 1px, solid, grey;
-}
-
-/* styling this little sheep */
+/* styling the sheep */
 
 .sheep {
   position: relative;
   margin: auto;
-  /* //animation: sheep-walking-cycle linear 20s infinite reverse; // moonwalking */
-  animation: sheep-walking-cycle linear 20s infinite;
+  /* //animation: sheep-walking-cycle linear 20s infinite reverse; // moonwalking :')*/
+  animation: sheep-walking-cycle linear 3s infinite;
+  @include tablet {
+    animation: sheep-walking-cycle linear 8s infinite;
+  }
+  @include desktop {
+    animation: sheep-walking-cycle linear 9s infinite;
+  }
 
   .legs {
     position: absolute;
@@ -97,47 +89,47 @@
       z-index: 0;
     }
     .piece-of-wool-2 {
-      @include circle($sheep-wool-dimension-medium);
+      @include circle($sheep-wool-m);
       top: 0;
       left: -5px;
     }
     .piece-of-wool-3 {
-      @include circle($sheep-wool-dimension-large);
+      @include circle($sheep-wool-l);
       top: -20px;
       left: 75px;
     }
     .piece-of-wool-4 {
-      @include circle($sheep-wool-dimension-xlarge);
+      @include circle($sheep-wool-xl);
       top: -15px;
       left: 25px;
     }
     .piece-of-wool-5 {
-      @include circle($sheep-wool-dimension-small);
+      @include circle($sheep-wool-s);
       bottom: -6px;
       left: 40px;
     }
     .piece-of-wool-6 {
-      @include circle($sheep-wool-dimension-xlarge);
+      @include circle($sheep-wool-xl);
       bottom: -2px;
       left: 50px;
     }
     .piece-of-wool-7 {
-      @include circle($sheep-wool-dimension-medium);
+      @include circle($sheep-wool-l);
       bottom: 0;
       left: 0;
     }
     .piece-of-wool-8 {
-      @include circle($sheep-wool-dimension-medium);
+      @include circle($sheep-wool-m);
       bottom: 10px;
       left: 100px;
     }
     .piece-of-wool-9 {
-      @include circle($sheep-wool-dimension-small);
-      bottom: 35px;
-      left: 134px;
+      @include circle($sheep-wool-s);
+      bottom: 45px;
+      left: -15px;
     }
     .piece-of-wool-10 {
-      @include circle($sheep-wool-dimension-large);
+      @include circle($sheep-wool-l);
       top: 0;
       left: 106px;
     }
@@ -145,11 +137,11 @@
 
   .head {
     position: absolute;
-    left: 32px;
+    left: 230px;
     top: 30px;
     z-index: 3;
-    width: $sheep-head-dimension-width;
-    height: $sheep-head-dimension-height;
+    width: $sheep-head-width;
+    height: $sheep-head-height;
     animation: head-cycle 20s infinite alternate;
 
     .head-face,
@@ -158,10 +150,9 @@
       left: 0;
       top: 0;
       background: $sheep-color;
-      width: $sheep-head-dimension-width;
-      height: $sheep-head-dimension-height;
-      border-radius: ($sheep-head-dimension-width - 5) slash()
-        $sheep-head-dimension-height;
+      width: $sheep-head-width;
+      height: $sheep-head-height;
+      border-radius: ($sheep-head-width - 5) slash() $sheep-head-height;
       z-index: 1;
     }
     .head-shadow {
@@ -181,6 +172,16 @@
       background: #fff;
       z-index: 3;
     }
+    .snout {
+      width: 40px;
+      height: 40px;
+      border-radius: 90%;
+      box-shadow: 5px 7px 0 $sheep-face-snout;
+      position: absolute;
+      z-index: 3;
+      left: 35px;
+      top: 75px;
+    }
     .ear {
       background: $sheep-color-ear;
       width: $sheep-ear-dimension;
@@ -194,14 +195,14 @@
       top: 15px;
 
       &.ear-1 {
-        @include rotate(75deg);
+        @include rotate(65deg);
         @extend .transform-origin-top-left-corner;
         animation: ear-1-cycle 20s infinite;
       }
       &.ear-2 {
         @include rotate(5deg);
         @extend .transform-origin-top-left-corner;
-        left: $sheep-head-dimension-width - $sheep-ear-dimension + 35px;
+        left: $sheep-head-width - $sheep-ear-dimension + 35px;
         animation: ear-2-cycle 20s infinite;
 
         &.ear-shadow {
@@ -212,7 +213,7 @@
       }
     }
     .eye {
-      @include oval($sheep-eye-dimension-width, $sheep-eye-dimension-height);
+      @include oval($sheep-eye-width, $sheep-eye-height);
       background: $sheep-color-eye;
       position: absolute;
       top: 35px;
@@ -220,10 +221,7 @@
       animation: eye-blink-cycle 0.3s 5s 2 alternate;
 
       .glow {
-        @include oval(
-          $sheep-eye-dimension-width / 3,
-          $sheep-eye-dimension-height / 3
-        );
+        @include oval($sheep-eye-width / 3, $sheep-eye-height / 3);
         background: #fff;
         position: absolute;
         left: 47%;
@@ -238,26 +236,31 @@
       }
     }
     .wool-head {
-      width: $sheep-head-dimension-width;
+      width: $sheep-head-width;
       position: absolute;
       left: 0;
       top: -4px;
       z-index: 4;
 
       .piece-of-wool-1 {
-        @include circle($sheep-wool-dimension-xxsmall);
+        @include circle($sheep-wool-xxs);
         top: 0;
         left: 5px;
       }
       .piece-of-wool-2 {
-        @include circle($sheep-wool-dimension-xsmall);
+        @include circle($sheep-wool-xxs);
         top: -10px;
         left: 25px;
       }
       .piece-of-wool-3 {
-        @include circle($sheep-wool-dimension-xxsmall);
+        @include circle($sheep-wool-xs);
+        top: -5px;
+        left: 35px;
+      }
+      .piece-of-wool-4 {
+        @include circle($sheep-wool-xxs);
         top: 0;
-        left: 55px;
+        left: 65px;
       }
       .wool-shadowlayer {
         .piece-of-wool {
@@ -269,120 +272,9 @@
     }
   }
 }
-
-/* sheep animations */
-@keyframes walk-leg-back-cycle {
-  0% {
-    @include rotate(-10deg);
-  }
-  100% {
-    @include rotate-and-move-x(10deg, -20px);
-  }
-}
-@keyframes walk-leg-front-cycle {
-  0% {
-    @include rotate(10deg);
-  }
-  100% {
-    @include rotate-and-move-x(-10deg, 20px);
-  }
-}
-
-@keyframes head-cycle {
-  40% {
-    @include rotate(10deg);
-  }
-  100% {
-    @include rotate(-5deg);
-  }
-}
-@keyframes ear-1-cycle {
-  0%,
-  10%,
-  20%,
-  40%,
-  50%,
-  100% {
-    @include rotate(75deg);
-  }
-  5%,
-  45% {
-    @include rotate(85deg);
-  }
-  15% {
-    @include rotate(80deg);
-  }
-}
-
-@keyframes ear-2-cycle {
-  0%,
-  10%,
-  20%,
-  30%,
-  40%,
-  50%,
-  70%,
-  80%,
-  100% {
-    @include rotate(5deg);
-  }
-  15%,
-  75% {
-    @include rotate(-5deg);
-  }
-  45% {
-    @include rotate(0deg);
-  }
-}
-
-@keyframes sheep-walking-cycle {
-  0% {
-    transform: translateX(650px);
-  }
-  100% {
-    transform: translateX(50px);
-  }
-}
-@keyframes eye-blink-cycle {
-  100% {
-    height: 2px;
-    border-radius: 0;
-    margin-top: 5px;
-  }
-}
-@keyframes eye-blink-glow-cycle {
-  100% {
-    height: 0;
-    border-radius: 0;
-  }
-}
-
-/* base page layout */
-body {
-  background: #a1d568;
-}
-
-/* Utility & Helpers */
-
-// If using webfonts this will reduce the thickness
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-// The (in)famous clearfix.
-.clearfix {
-  zoom: 1;
-  &:after,
-  &:before {
-    content: '';
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-.transform-origin-top-left-corner {
-  transform-origin: top left;
+.floor {
+  position: relative;
+  border-top: 5px solid $color-floor;
+  top: 235px;
+  width: 100vw;
 }

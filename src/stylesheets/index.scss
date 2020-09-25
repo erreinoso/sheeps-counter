@@ -1,12 +1,10 @@
 @import './core/variables';
 @import './core/reset';
 @import './core/mixins';
-// @import 'layout/page';
-// @import 'layout/header';
-// @import 'layout/footer';
 @import './App';
+@import './Animations';
 @import './SheepAnimation';
-
+@import './SheepCounter';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

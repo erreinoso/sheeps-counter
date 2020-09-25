@@ -1,32 +1,39 @@
+//responsive - breakpoints
+$tablet: 768px;
+$desktop: 1024px;
+
 // fonts
 $font-main: 'Roboto', sans-serif;
 
 // colors
 $color-white: #f3f4f5;
 $color-secondary: #999;
+$color-background: rgb(82, 141, 230);
+$color-floor: rgb(49, 136, 32);
 
 /* variables for sheep */
 $sheep-color: #fff;
 $sheep-shadow-color: #eee;
-$sheep-color-ear: #000;
+$sheep-color-ear: rgb(85, 51, 19);
 $sheep-color-eye: #000;
-$sheep-leg-front: #000;
+$sheep-leg-front: rgb(85, 51, 19);
 $sheep-leg-back: #444;
+$sheep-face-snout: #d9534f;
 
 $sheep-wool-base-dimension-width: 160px;
 $sheep-wool-base-dimension-height: 140px;
-$sheep-wool-dimension-xxsmall: 30px;
-$sheep-wool-dimension-xsmall: 35px;
-$sheep-wool-dimension-small: 50px;
-$sheep-wool-dimension-medium: 70px;
-$sheep-wool-dimension-large: 80px;
-$sheep-wool-dimension-xlarge: 90px;
+$sheep-wool-xxs: 30px;
+$sheep-wool-xs: 40px;
+$sheep-wool-s: 50px;
+$sheep-wool-m: 70px;
+$sheep-wool-l: 80px;
+$sheep-wool-xl: 90px;
 
-$sheep-head-dimension-width: 100px;
-$sheep-head-dimension-height: 130px;
-$sheep-face-front-dimension: $sheep-head-dimension-width - 15;
+$sheep-head-width: 100px;
+$sheep-head-height: 130px;
+$sheep-face-front-dimension: $sheep-head-width - 15;
 
-$sheep-ear-dimension: 50px;
+$sheep-ear-dimension: 45px;
 
-$sheep-eye-dimension-width: 15px;
-$sheep-eye-dimension-height: ceil($sheep-eye-dimension-width * 1.5);
+$sheep-eye-width: 15px;
+$sheep-eye-height: ceil($sheep-eye-width * 1.25);
