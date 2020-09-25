@@ -1,0 +1,32 @@
+// fonts
+$font-main: 'Roboto', sans-serif;
+
+// colors
+$color-white: #f3f4f5;
+$color-secondary: #999;
+
+/* variables for sheep */
+$sheep-color: #fff;
+$sheep-shadow-color: #eee;
+$sheep-color-ear: #000;
+$sheep-color-eye: #000;
+$sheep-leg-front: #000;
+$sheep-leg-back: #444;
+
+$sheep-wool-base-dimension-width: 160px;
+$sheep-wool-base-dimension-height: 140px;
+$sheep-wool-dimension-xxsmall: 30px;
+$sheep-wool-dimension-xsmall: 35px;
+$sheep-wool-dimension-small: 50px;
+$sheep-wool-dimension-medium: 70px;
+$sheep-wool-dimension-large: 80px;
+$sheep-wool-dimension-xlarge: 90px;
+
+$sheep-head-dimension-width: 100px;
+$sheep-head-dimension-height: 130px;
+$sheep-face-front-dimension: $sheep-head-dimension-width - 15;
+
+$sheep-ear-dimension: 50px;
+
+$sheep-eye-dimension-width: 15px;
+$sheep-eye-dimension-height: ceil($sheep-eye-dimension-width * 1.5);

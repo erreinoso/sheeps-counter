@@ -1,0 +1,41 @@
+/* mixins */
+@function slash() {
+  @return unquote('/');
+}
+@mixin rotate-and-move-x($degrees, $moveX) {
+  -webkit-transform: rotate($degrees) translateX($moveX); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: rotate($degrees) translateX($moveX); /* IE 9 */
+  transform: rotate($degrees) translateX($moveX); /* Firefox 16+, IE 10+, Opera */
+}
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: rotate($degrees); /* IE 9 */
+  transform: rotate($degrees); /* Firefox 16+, IE 10+, Opera */
+}
+@mixin oval($width, $height) {
+  width: $width;
+  height: $height;
+  -webkit-border-radius: $width/2 slash() $height/2;
+  -moz-border-radius: $width/2 slash() $height/2;
+  border-radius: $width/2 slash() $height/2;
+}
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  border-radius: $width/2;
+}
+@mixin animation-settings(
+  $animation-duration,
+  $animation-iteration-count,
+  $animation-direction,
+  $animation-timing-function,
+  $animation-fill-mode
+) {
+  animation-duration: $animation-duration;
+  animation-iteration-count: $animation-iteration-count;
+  animation-direction: $animation-direction;
+  animation-timing-function: $animation-timing-function;
+  animation-fill-mode: $animation-fill-mode;
+}

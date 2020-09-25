@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Book club",
+    "fa": "fas fa-glasses",
+    "members": [
+      "Rosalie Bradley",
+      "Lula Day",
+      "Hallie Bryant",
+      "Antonio Martin",
+      "Polly Nelson"
+    ]
+  },
+  {
+    "name": "Chess club",
+    "fa": "fas fa-chess",
+    "members": [
+      "Francisco Alexander",
+      "Alice Garner",
+      "Michael Elliott",
+      "Tyler Sparks",
+      "Rose Munoz",
+      "Lena Rios",
+      "Abbie Perkins"
+    ]
+  }
+]
