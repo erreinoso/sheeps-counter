@@ -2,7 +2,7 @@
 
 These pandemic days, I have trouble sleeping and a thought came to my mind: Why not to update the way we fight insomnia?
 
-😉 This project is a small CSS and React practice.
+😉 This project is a small CSS and React practice (I'm aware that doing the counter is much simplier with Javascript, I was just practising).
 
 ![gif of sheep wandering](https://github.com/erreinoso/sheeps-counter/blob/sheep/sheeps-counter-readme.gif)
 
