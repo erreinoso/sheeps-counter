@@ -5,7 +5,6 @@ import SheepAnimation from './SheepAnimation';
 
 class App extends React.Component {
   render() {
-    console.log('render de app');
     return (
       <div>
         <SheepAnimation />
